@@ -6,7 +6,7 @@ public class ArrayAppearance{
 		int appearance = collections[0];
 		int lastindex = collections[collections.length-1];
 		int count = 0;
-		
+		int appear = 0;
 		for(;count < collections.length; count++){
 
 			int counter = 0;
@@ -14,11 +14,16 @@ public class ArrayAppearance{
 
 				if (collections[counting] == collections[count]){
 				counter++;
+//                appear++;
                 }
 			}
             System.out.println("Element " + collections[count] + " appears " + counter + " time(s).");
-//		if counter == count
+		if (counter >= appear){
+            appear = counter;
+            appearance = collections[count];
         }
-
+        }
+            System.out.println(appear);
+            System.out.println(appearance);
     }
 }
